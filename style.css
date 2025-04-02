@@ -39,7 +39,7 @@ main {
 
 }
 
-info {
+.info {
     padding-inline: 0.8rem;
     
     strong {
@@ -49,5 +49,74 @@ info {
     .imput-box {
         margin-top: 0.6rem;
         background: var(--squeeze);
+        margin-top: 0.6rem;
+        background: var(--squeeze);
+        display: flex;
+        align-items: center;
+        padding: 0.6rem 1.8rem;
+        border-radius: 0.5rem;
+
+        input {
+            border: none;
+            background: transparent;
+            text-align: right;
+            width: 100%;
+            font-size: 2.4rem;
+            outline: none;
+            font-weight: 700;
+            color: var(--sherpa-blue);  
+        }
+
+        input::placeholder {
+            color: var(--sherpa-blue);
+            opacity: 0.35;
+        }
+
+        &:has(input:focus) {
+            outline: 2px solid var(--topaz);
+        }
+    }
+
+    .tip {
+        div {
+            margin-top: 1.6rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.6rem;
+
+            button {
+                font-size: 2.4rem;
+                background: var(--sherpa-blue);
+                color: var(--white);
+                font-weight: 700;
+                border: none;
+                padding-block: 0.6rem;
+                border-radius: 0.5rem;
+            }
+
+            .button-selected {
+                background-color: var(--topaz);
+             }
+             
+             input {
+                 width: 100%;
+                 font-size: 2.4rem;
+                 text-align: center;
+                 border: none;
+                 background: var(--squeeze);
+                 border-radius: 0.5rem;
+                 padding-block: 0.6rem;
+                 font-weight: 700;
+                 color: var(--sherpa-blue);
+                 
+                 &::placeholder {
+                     color: var(--beetle-green);
+                 }
+ 
+                 &:focus {
+                     outline: 2px solid var(--topaz);
+                 }
+            }
+        }
     }
 }
